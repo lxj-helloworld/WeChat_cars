@@ -1,12 +1,22 @@
 <!--pages/lock/lock.wxml-->
 
 <page>
-  <view class="container">
+  <view class="container-lock ">
     <view class="static">
       <image src="/resources/car.png" class="car"></image>
       <view class="margin-top">安全驾驶是用户的职责</view>
       <view class="margin-top">请将车辆停在停车位内</view>
     </view>
+
+    <view class="margin-top-xl avatar-container">
+      <button wx:if="{{avatarUrl}}" class="cu-avatar round lg by-grey maring-xs"
+      open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+        <text class="cuIcon-people"></text>
+      </button>
+      <image wx:else src="{{avatarUrl}}" class="cu-avatar round lg by-grey maring-xs"></image>
+      <view class="margin-top">实时展示我的头像</view>
+    </view>
+
 
     <button class="bg-grey lg unlock">
       立即开锁

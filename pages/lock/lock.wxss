@@ -2,7 +2,6 @@
 .car {
   width: 600rpx;
   height: 450rpx;
-  margin-top: 100rpx;
 }
 
 .static {
@@ -10,12 +9,28 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  align-content: space-around;
   width: 750rpx;
 }
 
-.unlock{
+.unlock {
   width: 600rpx;
   width: 80%;
-  position: absolute;
-  bottom: 100rpx;
+}
+
+.container-lock {
+  width: 750rpx;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.avatar-container{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 }
