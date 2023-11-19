@@ -1,1 +1,39 @@
 /* pages/register/register.wxss */
+.lic-templ {
+  opacity: 0.2;
+  position: absolute;
+
+}
+
+.scretched{
+  width: 100%;
+  height: 100%;
+}
+
+.camera {
+  font-size: 200rpx;
+}
+
+.container-inner {
+  padding-top: 100rpx;
+  width: 600rpx;
+  position: relative;
+  height: 400rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hint {
+  position: absolute;
+  bottom: -90rpx;
+}
+
+.lic-form{
+  position: relative;
+  width: 600rpx;
+}
+
+.cu-form-group .title {
+  min-width: calc(4em + 30rpx);
+}

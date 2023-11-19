@@ -1,2 +1,54 @@
 <!--pages/register/register.wxml-->
-<text>pages/register/register.wxml</text>
+<view class="container">
+  <view wx:if="{{!licImageSource}}" class="container-inner" bind:tap="uploadLic">
+    <image class="lic-templ scretched" src="/resources/lic.png"></image>
+    <view class="cuIcon-camerafill lg text-gray camera"></view>
+    <view class="hint">请上传你的驾照</view>
+  </view>
+
+  <block wx:else="{{licImageSource}}">
+    <view class="container-inner">
+      <image class="scretched" src="{{licImageSource}}"></image>
+    </view>
+    <view>
+      <view class="lic-form">
+        <view class="cu-form-group margin-top">
+          <view class="title">驾驶证号</view>
+          <input placeholder="驾驶证号" value="{{licNumber}}" disabled="{{state!=='UNDEFINED'}}"></input>
+        </view>
+        <view class="cu-form-group">
+          <view class="title">姓名</view>
+          <input placeholder="姓名" value="{{name}}" disabled="{{state!=='UNDEFINED'}}"></input>
+        </view>
+
+        <view class="cu-form-group">
+          <view class="title">性别</view>
+          <picker bindchange="onGenderChange" value="{{genderIndex}}" range="{{genders}}" disabled="{{state!=='UNDEFINED'}}">
+            <view class="picker">
+              {{genders[genderIndex]}}
+            </view>
+          </picker>
+        </view>
+
+        <view class="cu-form-group">
+          <view class="title">出生日期</view>
+          <picker mode="date" value="{{birthDate}}" bindchange="onBirthdateChange" disabled="{{state!=='UNDEFINED'}}">
+            <view class="picker">
+              {{birthDate}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <button wx:if="{{state==='UNDEFINED'}}" class="cu-btn bg-red lg margin-top-xl" bind:tap="submit">
+      递交审查
+    </button>
+    <button wx:if="{{state==='PENDING'}}" class="cu-btn block line-blue lg margin-top-xl" disabled>
+      审查中
+    </button>
+    <button wx:if="{{state==='VERIFED'}}" class="cu-btn bg-red lg margin-top-xl"
+    bind:tap="reSubmit">
+      审查结束
+    </button>
+  </block>
+</view>

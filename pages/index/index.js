@@ -101,11 +101,14 @@ Page({
     moveAgain()
   },
   onScanClicked() {
-    wx.scanCode({
-      success: (res) => {
-        console.log("res = " + JSON.stringify(res))
-      },
-      fail: console.log
+    // wx.scanCode({
+    //   success: (res) => {
+    //     console.log("res = " + JSON.stringify(res))
+    //   },
+    //   fail: console.log
+    // })
+    wx.navigateTo({
+      url: '/pages/register/register',
     })
   }
 
