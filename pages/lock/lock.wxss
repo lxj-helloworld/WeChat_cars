@@ -1,1 +1,21 @@
 /* pages/lock/lock.wxss */
+.car {
+  width: 600rpx;
+  height: 450rpx;
+  margin-top: 100rpx;
+}
+
+.static {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 750rpx;
+}
+
+.unlock{
+  width: 600rpx;
+  width: 80%;
+  position: absolute;
+  bottom: 100rpx;
+}

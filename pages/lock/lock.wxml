@@ -1,2 +1,15 @@
 <!--pages/lock/lock.wxml-->
-<text>pages/lock/lock.wxml</text>
+
+<page>
+  <view class="container">
+    <view class="static">
+      <image src="/resources/car.png" class="car"></image>
+      <view class="margin-top">安全驾驶是用户的职责</view>
+      <view class="margin-top">请将车辆停在停车位内</view>
+    </view>
+
+    <button class="bg-grey lg unlock">
+      立即开锁
+    </button>
+  </view>
+</page>
